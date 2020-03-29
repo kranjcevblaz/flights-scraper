@@ -35,8 +35,6 @@ while i < listSize:
 
     click_more()
 
-    # test
-
     time.sleep(5)
 
     html = driver.execute_script("return document.documentElement.outerHTML")
