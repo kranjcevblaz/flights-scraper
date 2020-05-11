@@ -13,6 +13,7 @@ flight_date = '2020-03-27'
 
 driver = webdriver.Chrome('/Users/blazkranjcev/Downloads/chromedriver')
 
+# expand the list of flight results
 def click_more():
     click_more = driver.find_element_by_class_name(
         'gws-flights-results__dominated-link')
@@ -42,8 +43,6 @@ while i < listSize:
 
     source = driver.page_source
     soup = BeautifulSoup(source, 'lxml')
-
-    # scraper part
 
     for element in sel_soup.find_all('div', class_='gws-flights-results__collapsed-itinerary'):
 
